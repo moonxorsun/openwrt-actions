@@ -281,6 +281,6 @@ jobs:
           removeArtifacts: true
           tag: ${{matrix.target}}
           commit: master
-          token: ${{secrets.PERSONAL_TOKEN}}
+          token: ${{ secrets.GITHUB_TOKEN }}
           artifacts: ./Firmware/*
           bodyFile: ./user/${{matrix.target}}/RELEASE.md
